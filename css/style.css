@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.dotted-hr{
+    border: 6px dotted #fff;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+/* mobile version */
+[class*="col-"]{
+    width: 100%;
+}
+
+.navbar {
+    background-color: #13544e;
+    padding: 1% 7%;
+    text-align: center;
+}
+
+.navbar h1 {
+    color: #fff;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+
+}
+
+.nav-menu a{
+    background-color: rgba(240, 255, 255, 0.199);
+    border-radius: 5px;
+    margin: 7px;
+    padding: 10px;
+    transition: .4s;
+}
+
+.nav-menu a:hover{
+   background-color: grey; 
+}
+
+.navbar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nav-logo img {
+    width: 150px;
+}
+
+/* navbar design ends here */
+
+/* profile design starts here */
+
+.profile {
+    padding: 130px 10px;
+    text-align: center;
+}
+
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.profile-desc p {
+    color: grey;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+}
+
+/* profile design ends here */
+
+/* about me design starts here */
+
+.about-me{
+    background-color: #530394;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+}
+
+.about-me::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.aboutme-image img{
+    border: 5px solid #ff4500;
+    border-radius: 20px;
+    height: 220px;
+    width: 200px;
+}
+
+.about-me p{
+    text-align: center;
+}
+
+.about-me a{
+    font-size: 1.2rem;
+}
+
+/* about me ends here */
+
+/* skill box start here */
+
+.work-experience{
+    padding: 1% 0%;
+}
+
+.work-experience .card{
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+    padding: 20px 40px;
+    transition: 0.3s;
+    margin: 0 40px;
+   
+}
+
+.card:hover{
+    box-shadow: 0 4px 5px 5px #00000031;
+}
+
+.card-icon {
+    text-align: center;
+}
+
+.card-icon i {
+    margin-top: 20px;
+    font-size: 45px;
+}
+
+.fa-solid {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+
+.work-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+.card-title h2{
+    background-color: #616161;
+    color: #fff;
+    margin: 20px 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-desc ol li{
+    padding: 15px;
+}
+
+.card-desc hr{
+    color: #fff;
+    margin: 5px 0;
+}
+
+
+.education-qualification{
+    padding: 1% 0%;
+}
+
+.education-qualification .card{
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+    padding: 20px 40px;
+    transition: 0.3s;
+    margin: 0 40px;
+    height: 800px;
+}
+
+.education-qualification::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+.skills{
+    padding: 1% 0%;
+}
+
+.skills .card{
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+    padding: 20px 40px;
+    transition: 0.3s;
+    margin: 0 40px;
+    height: 800px;
+}
+
+.skills::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.skills-container{
+    padding-right: 45px;
+}
+
+.skills-container ul{
+    list-style: none;
+}
+
+.skills-container ul li {
+    font-weight: bold;
+    margin: 30px 10px;
+    position: relative;
+}
+
+.skills-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #0011ff;
+    border-radius: 1000px;
+}
+
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: #ff4500;
+    border-radius: 1000px;
+
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+}
+
+.skills-container li.html::after{
+    animation-name: html;
+}
+
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+
+
+.skills-container li.css::after{
+    animation-name: css;
+}
+
+@keyframes css{
+    to{
+        width: 90%;
+    }
+}
+
+.skills-container li.scss::after{
+    animation-name: scss;
+}
+
+@keyframes scss{
+    to{
+        width: 85%;
+    }
+}
+
+.skills-container li.bs::after{
+    animation-name: bs;
+}
+
+@keyframes bs{
+    to{
+        width: 80%;
+    }
+}
+
+.skills-container li.tw::after{
+    animation-name: tw;
+}
+
+@keyframes tw{
+    to{
+        width: 80%;
+    }
+}
+
+.skills-container li.js::after{
+    animation-name: js;
+}
+
+@keyframes js{
+    to{
+        width: 85%;
+    }
+}
+
+.skills-container li.node::after{
+    animation-name: node;
+}
+
+@keyframes node{
+    to{
+        width: 75%;
+    }
+}
+
+.skills-container li.py::after{
+    animation-name: python;
+}
+
+@keyframes python{
+    to{
+        width: 70%;
+    }
+}
+
+.skills-container li.rb::after{
+    animation-name: ruby;
+}
+
+@keyframes ruby{
+    to{
+        width: 70%;
+    }
+}
+
+/* skill box end here */
+
+/* achievement start here */
+
+.achievement-contact{
+    padding: 1% 7%;
+    background-color: #018ab4;
+    color: #fff;
+}
+
+.contact{
+    padding: 1% 7%;
+}
+
+.contact input, textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact button {
+    border: none;
+    border-radius: 2px;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+    width: 100px;
+    font-size: 1.2rem;
+}
+
+.social {
+    text-align: center;
+}
+
+.media-buttons .btn{
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 10px;
+    margin: 10px;
+    width: 50px;
+    background-color: #fff;
+}
+
+.btn:hover{
+    background-color: antiquewhite;
+}
+
+.achievement-contact::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* achievement contact end */
+
+/* footer start here */
+
+.footer{
+    background-color: #333333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-menu a{
+    display: block;
+    margin: 15px;
+    font-size: 1rem;
+}
+
+.footer-menu a:hover{
+    color: #ff4500;
+}
+
+.footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+
